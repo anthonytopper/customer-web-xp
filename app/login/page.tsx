@@ -3,6 +3,7 @@ import Testimonials from "@/components/ui/Testimonials";
 import { getPlanBase } from "@/lib/api/bible";
 import { DEFAULT_BASE_ID } from "@/lib/api/bible";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default async function LoginPage() {
     const baseLayer = await getPlanBase(DEFAULT_BASE_ID);
@@ -13,7 +14,9 @@ export default async function LoginPage() {
                 <div className="flex flex-col items-center justify-center">
                     <Image src="/logo.svg" alt="Rebind Logo" width={100} height={100} />
                 </div>
-                <LoginCard />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <LoginCard />
+                </Suspense>
             </div>
             <div 
                 className="flex-1 flex flex-col items-center justify-center bg-slate-50/50" 
