@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import PricingCardStripe from "@/components/ecom/PricingCardStripe";
 
-export default function PaymentsPage() {
-
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -62,6 +61,14 @@ export default function PaymentsPage() {
     <PricingCardStripe onSelectPlan={(planId, priceId) => {
       handlePlanSelect(planId, priceId);
     }} />
+  );
+}
+
+export default function PaymentsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
 
