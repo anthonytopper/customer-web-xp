@@ -110,9 +110,8 @@ export default function PricingCardStripe({ onSelectPlan }: PricingCardStripePro
         features.push('Full access', 'Premium features', 'Email support');
       }
 
-      // Determine if popular (from metadata or first product)
-      const isPopular = product.metadata?.popular === 'true' || 
-                       (products.length > 0 && products[0].id === product.id);
+      // Determine if popular from metadata (will be overridden for 3-product case)
+      const isPopular = product.metadata?.popular === 'true';
 
       return {
         id: product.id,
@@ -129,7 +128,7 @@ export default function PricingCardStripe({ onSelectPlan }: PricingCardStripePro
       };
     });
 
-    return plans
+    const filteredAndSorted = plans
       .filter((plan): plan is PricingPlan => plan !== null)
       .sort((a, b) => {
         // Sort: free first, then by price
@@ -142,6 +141,20 @@ export default function PricingCardStripe({ onSelectPlan }: PricingCardStripePro
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceA - priceB;
       });
+
+    // If there are exactly 3 products, make the middle one "Most Popular"
+    if (filteredAndSorted.length === 3) {
+      // Reset all popular flags first
+      filteredAndSorted.forEach(plan => {
+        plan.isPopular = false;
+        plan.ctaVariant = 'secondary';
+      });
+      // Set middle one (index 1) as popular
+      filteredAndSorted[1].isPopular = true;
+      filteredAndSorted[1].ctaVariant = 'primary';
+    }
+
+    return filteredAndSorted;
   };
 
   const handlePlanClick = (plan: PricingPlan) => {
