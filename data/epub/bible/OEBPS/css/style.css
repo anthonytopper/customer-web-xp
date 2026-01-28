@@ -1,0 +1,1425 @@
+@font-face {
+    font-family: "IM FELL Double Pica";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/IMFellDoublePica-Regular.ttf);
+}
+p {
+    margin-bottom: 0px;
+    text-indent: 0px;
+    line-height: 1.4;
+    margin-top: 0px;
+    text-align: justify;
+}
+
+p + p {
+    margin-top: 0.7em;
+}
+
+p.subsq {
+    margin-top: 0.7em;
+}
+
+/* Remove spacing when a poetry paragraph follows any paragraph */
+p + p.poetry {
+    margin-top: 0;
+}
+
+/* Remove spacing when any paragraph follows a poetry paragraph */
+p.poetry + p {
+    margin-top: 0;
+}
+
+/* Add spacing back when a non-poetry paragraph follows a poetry paragraph */
+p.poetry + p:not(.poetry) {
+    margin-top: 0.7em;
+}
+p.poetry { 
+    margin-left: .5in; 
+    text-indent: -0.25in;
+}
+
+p.psalmBook { 
+    text-align: center; 
+    font-weight: bold;
+}
+
+p.psalmTitle { 
+    text-align: center; 
+    font-style: italic;
+}
+
+p.right { 
+    text-align: right;
+}
+.implicit-break {
+    margin-top: 1.4em;
+    margin-bottom: 0em;
+    height: 0em;
+}
+.element-bodymatter .text > .implicit-break {
+    margin-bottom: 1.4em;
+    clear: both;
+    margin-top: 0em;
+    height: 1.4em;
+}
+div.endnotes p {
+    line-height: 1.3 !important;
+}
+p span.last-word, li span.lastword {
+    -webkit-hyphenate-limit-after: 7;
+}
+.toc-item p {
+    line-height: 1.2 !important;
+}
+.toc-item {
+    margin-bottom: 0.1em;
+}
+div.alignment-block.inset-block {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+blockquote {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+blockquote.verse {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+p.blockquote-content-verse {
+    padding-left: 1.5em;
+    margin-top: 0px;
+    text-indent: -1.5em;
+}
+ul, ol {
+    padding-left: 2em;
+    padding-right: 1.5em;
+}
+.section-title {
+    font-size: 100%;
+}
+span.monospace, span.monospace b {
+    font-family: Courier, monospace;
+}
+span.sans-serif, span.sans-serif b {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+sub, sup {
+    font-size: 0.75em;
+}
+body {
+    font-family: Palatino, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    page-break-inside: avoid;
+    -webkit-font-kerning: auto;
+}
+@page {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+a, a * {
+    color: rgb(36, 39, 116);
+}
+a {
+    text-decoration: underline;
+}
+a.link-contains-image {
+    text-decoration: none !important;
+}
+.text-is-url {
+    word-wrap: break-word;
+}
+.section-title {
+    margin-top: 1.4em;
+    padding-top: 0.7em;
+    line-height: 1.4 !important;
+    margin-bottom: 0.7em;
+}
+.section-title.keep-with-next.paragraph-follows {
+    margin-bottom: 0px;
+    padding-bottom: 0.7em;
+}
+blockquote {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
+blockquote.with-attribution {
+    margin-bottom: 2.1em;
+}
+p.blockquote-content {
+    line-height: 1.4 !important;
+}
+p.blockquote-content-verse {
+    text-align: left;
+}
+p.blockquote-attribution {
+    line-height: 1.4 !important;
+    margin-top: 0.7em;
+    text-align: right;
+    margin-left: 15%;
+}
+ul, ol {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
+li {
+    line-height: 1.4 !important;
+}
+blockquote.prose.keep-lines-on-same-page p, blockquote.verse.keep-lines-on-same-page .stanza, blockquote.keep-lines-on-same-page .paragraph-and-attribution, blockquote.text-conversation.keep-lines-on-same-page, blockquote.written-note.keep-lines-on-same-page, div.alignment-block.keep-lines-on-same-page .text-block, ul.keep-lines-on-same-page, ol.keep-lines-on-same-page {
+    page-break-inside: avoid;
+}
+hr {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+.implicit-break, .ornamental-break {
+    page-break-inside: avoid;
+}
+.page-break {
+    page-break-before: always;
+    margin-top: 2.8em;
+}
+.alignment-block, blockquote, .ornamental-break, .section-title .endnotes {
+    clear: both;
+}
+ul, ol {
+    clear: left;
+}
+li {
+    text-align: left;
+}
+sub, sup {
+    margin-left: 0.05em;
+}
+sub, sup {
+    line-height: 1 !important;
+}
+span.smallcaps {
+    font-variant-numeric: normal;
+    font-variant: small-caps;
+    font-variant-alternates: normal;
+    font-variant-position: normal;
+    font-variant-east-asian: normal;
+    letter-spacing: 0.04em;
+    font-variant-ligatures: none;
+}
+span.strikethrough {
+    text-decoration: line-through;
+}
+span.underline {
+    text-decoration: underline;
+}
+img.low-res {
+    display: none;
+}
+.inline-image {
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+.inline-image, .inline-image-caption {
+    display: block;
+}
+figure {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.inline-image-with-caption {
+    page-break-inside: avoid;
+}
+.inline-image.inline-image-after-section-begin.inline-image-flow-within-text {
+    margin-top: 1.5em;
+}
+.inline-image.inline-image-after-section-begin.inline-image-flow-within-text.inline-image-full {
+    margin-top: 2em;
+}
+.inline-image.inline-image-before-element-end.inline-image-flow-within-text {
+    margin-bottom: 1.5em;
+}
+.inline-image.inline-image-before-element-end.inline-image-flow-within-text.inline-image-full {
+    margin-bottom: 2em;
+}
+.inline-image-caption {
+    font-size: 75%;
+}
+.accessible-character-formatting .inline-image-caption {
+    font-size: 90%;
+}
+.inline-image-caption {
+    margin-top: 1em;
+    line-height: 1.2 !important;
+}
+.inline-image-flow-left .inline-image-caption, .inline-image-flow-right .inline-image-caption {
+    margin-bottom: 0.5em;
+}
+.inline-image-flow-separate-page {
+    page-break-inside: avoid;
+}
+.inline-image-flow-separate-page {
+    page-break-before: always;
+    page-break-after: always;
+}
+.inline-image-flow-separate-page.inline-image-aspect-wide.inline-image-size-large {
+    padding-top: 160px;
+}
+.inline-image-flow-separate-page.inline-image-aspect-wide.inline-image-size-full {
+    padding-top: 128px;
+}
+.inline-image-flow-separate-page.inline-image-aspect-square.inline-image-size-large {
+    padding-top: 128px;
+}
+.inline-image-flow-separate-page.inline-image-aspect-square.inline-image-size-full {
+    padding-top: 64px;
+}
+.inline-image-flow-separate-page.inline-image-aspect-tall.inline-image-size-large {
+    padding-top: 16px;
+}
+.inline-image-flow-separate-page.inline-image-aspect-tall.inline-image-size-full {
+    padding-top: 0px;
+}
+.inline-image-kind-bookcover img {
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.inline-image-kind-bookcover.inline-image-with-caption img {
+    margin-bottom: 1px;
+}
+.inline-image-kind-bookcover.inline-image-size-full {
+    margin-left: 11px;
+    margin-right: 11px;
+    width: auto;
+}
+.inline-image-kind-bookcover.inline-image-flow-left {
+    margin-left: 4px;
+}
+.inline-image-kind-bookcover.inline-image-flow-right {
+    margin-right: 11px;
+}
+.inline-image-kind-figure img {
+    border-top-color: rgb(152, 152, 152);
+    border-right-color: rgb(152, 152, 152);
+    border-bottom-color: rgb(152, 152, 152);
+    border-left-color: rgb(152, 152, 152);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    box-sizing: border-box;
+}
+.inline-image-caption span.figure-number {
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant: small-caps;
+    font-variant-alternates: normal;
+    font-variant-position: normal;
+    font-variant-east-asian: normal;
+}
+.inline-image-flow-left.inline-image-flow-within-text {
+    float: left;
+    margin-right: 6%;
+}
+.inline-image-flow-right.inline-image-flow-within-text {
+    float: right;
+    margin-left: 6%;
+}
+.inline-image-container {
+    display: inline-block;
+}
+.inline-image img {
+    width: 100%;
+    height: auto;
+}
+.inline-image-flow-left.inline-image-flow-within-text .inline-image-container, .inline-image-flow-right.inline-image-flow-within-text .inline-image-container {
+    width: 100%;
+}
+.inline-image-flow-center.inline-image-flow-within-text.inline-image-size-small .inline-image-container {
+    width: 35%;
+}
+.inline-image-flow-left.inline-image-flow-within-text.inline-image-size-small, .inline-image-flow-right.inline-image-flow-within-text.inline-image-size-small {
+    width: 29%;
+}
+.inline-image-flow-center.inline-image-flow-within-text.inline-image-size-medium .inline-image-container {
+    width: 50%;
+}
+.inline-image-flow-left.inline-image-flow-within-text.inline-image-size-medium, .inline-image-flow-right.inline-image-flow-within-text.inline-image-size-medium {
+    width: 40%;
+}
+.inline-image-flow-center.inline-image-flow-within-text.inline-image-size-large .inline-image-container {
+    width: 75%;
+}
+.inline-image-flow-left.inline-image-flow-within-text.inline-image-size-large, .inline-image-flow-right.inline-image-flow-within-text.inline-image-size-large {
+    width: 69%;
+}
+.inline-image-flow-center.inline-image-flow-within-text.inline-image-size-full .inline-image-container {
+    width: 100%;
+}
+.inline-image-flow-left.inline-image-flow-within-text.inline-image-size-full, .inline-image-flow-right.inline-image-flow-within-text.inline-image-size-full {
+    width: 94%;
+}
+.inline-image-aspect-tall.inline-image-size-large.inline-image-with-caption .inline-image-container {
+    width: 66%;
+}
+.inline-image-aspect-tall.inline-image-size-full.inline-image-with-caption .inline-image-container {
+    width: 76%;
+}
+.inline-image-aspect-tall.inline-image-size-large.inline-image-without-caption .inline-image-container {
+    width: 72%;
+}
+.inline-image-aspect-tall.inline-image-size-full.inline-image-without-caption .inline-image-container {
+    width: 82%;
+}
+p.dedication-content {
+    text-align: center;
+    text-indent: 0px;
+}
+p.dedication-content {
+    font-style: italic;
+}
+.accessible-character-formatting p.dedication-content {
+    font-style: normal;
+}
+.element-type-dedication.element-without-heading {
+    margin-top: 10em;
+}
+.element-type-epigraph.element-without-heading {
+    margin-top: 10em;
+}
+.element-type-also-by .heading .title-block, .element-type-blurbs .heading .title-block {
+    font-size: 90%;
+}
+.element-type-also-by .subhead {
+    text-align: center;
+}
+p.also-by-content {
+    text-indent: 0px;
+    font-size: 90%;
+    text-align: center;
+}
+p.also-by-content, p.also-by-content.alignment-block-content {
+    margin-top: 0.5em;
+}
+.element-type-blurbs blockquote {
+    page-break-inside: avoid;
+}
+.cover-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.toc-contents {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+p.toc-content {
+    text-align: left;
+}
+.toc-item {
+    page-break-inside: avoid;
+}
+.toc-item-number {
+    padding-right: 0.3em;
+    text-indent: 0px;
+    padding-left: 0px;
+}
+.toc-item-children {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5em;
+}
+.toc-group-chapter {
+    margin-top: 0.5em;
+}
+.toc-item.has-no-children .toc-item-title {
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
+}
+.toc-frontmatter-group {
+    margin-bottom: 0.75em;
+}
+.toc-backmatter-group {
+    margin-top: 0.75em;
+}
+.toc-item-entry-type-volume.has-children {
+    margin-top: 0.75em;
+}
+.toc-item.has-author {
+    margin-bottom: 0.5em;
+}
+.toc-item-author, .toc-item-subtitle {
+    margin-top: 0.1em;
+}
+.toc-item.has-leading-number .toc-item-author, .toc-item.has-leading-number .toc-item-subtitle {
+    margin-left: 1.5rem;
+}
+.toc-item-subtitle {
+    font-style: italic;
+}
+p.toc-content {
+    font-size: 90%;
+}
+p.toc-content.toc-item-author, p.toc-content.toc-item-subtitle {
+    font-size: 75%;
+}
+.toc-item-number {
+    font-size: 80%;
+}
+.toc-item-entry-type-part .toc-item-number {
+    font-size: 70%;
+}
+.element-type-toc .heading .title-block {
+    font-size: 95%;
+}
+div.title-page, section.title-page {
+    text-align: center;
+}
+div.title-page .title-page-title-subtitle-block, section.title-page .title-page-title-subtitle-block {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+div.title-page-title-subtitle-block {
+    min-height: 140px;
+    margin-top: 140px;
+}
+div.title-page-title-subtitle-block {
+    margin-bottom: 2em;
+}
+h1.title-page-title, h2.title-page-subtitle, p.title-page-series-name, p.title-page-series-position, h2.title-page-contributor, h2.title-page-publisher {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 1.2 !important;
+}
+h1.title-page-title {
+    font-size: 150%;
+}
+h2.title-page-subtitle {
+    margin-top: 0.5em;
+    font-size: 100%;
+    margin-bottom: 1.5em;
+}
+div.title-page-series-info {
+    margin-top: 0.35em;
+}
+p.title-page-series-name {
+    font-size: 100%;
+}
+p.title-page-series-position {
+    margin-top: 0.25em;
+    font-size: 90%;
+}
+div.title-page-contributor-block {
+    min-height: 80px;
+    margin-bottom: 1.5em;
+}
+div.title-page-contributor-secondary-block {
+    margin-top: 1.5em;
+}
+h2.title-page-contributor-without-introduction {
+    margin-bottom: 0.5em;
+}
+h2.title-page-contributor-with-introduction {
+    margin-bottom: 0.75em;
+}
+h2.title-page-contributor-primary {
+    font-size: 120%;
+}
+h2.title-page-contributor-secondary {
+    font-size: 100%;
+}
+span.title-page-contributor-introduction {
+    display: block;
+    margin-bottom: 0.25em;
+    font-size: 90%;
+}
+.titlepage-several-primary-contributors .title-page-contributor {
+    font-size: 90%;
+}
+.titlepage-several-primary-contributors .title-page-contributor-without-introduction {
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.titlepage-several-secondary-contributors span.title-page-contributor-introduction {
+    display: inline;
+}
+.titlepage-ornament-size-container {
+    display: inline-block;
+}
+.titlepage-ornament-size-container img.titlepage-ornament-image {
+    width: 100% !important;
+    height: auto !important;
+}
+div.title-page-publisher-logo-size-container {
+    display: inline-block;
+}
+img.title-page-publisher-logo-image {
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: middle;
+}
+div.title-page-publisher-logo-block {
+    display: inline-block;
+}
+h2.title-page-publisher {
+    font-size: 80%;
+}
+div.title-page, section.title-page {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+div.title-page-publisher-logo-block.title-page-publisher-logo-aspect-wide {
+    width: 32%;
+}
+div.title-page-publisher-logo-block.title-page-publisher-logo-aspect-square {
+    width: 36.5%;
+}
+div.title-page-publisher-logo-block.title-page-publisher-logo-aspect-tall {
+    width: 48%;
+}
+p.blockquote-attribution {
+    font-size: 80%;
+    letter-spacing: 0.05em;
+}
+p.blockquote-attribution::before {
+    content: "— ";
+}
+p.blockquote-attribution, p.blockquote-attribution sub, p.blockquote-attribution sup {
+    font-family: "IM FELL Double Pica", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+p.blockquote-attribution, p.blockquote-attribution sub, p.blockquote-attribution sup {
+    text-transform: uppercase;
+}
+.heading-container-single {
+    text-align: center;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.heading-container-single h1.element-title, .heading-container-single div.element-number, .heading-container-single h1.element-number-and-title, .heading-container-single h2.element-subtitle, .heading-container-single h2.element-author {
+    text-align: center;
+}
+.heading-size-full {
+    min-height: 12em;
+}
+.heading-size-full.heading-without-image .heading-contents {
+    padding-top: 4.5em;
+}
+.heading-size-full.heading-with-image .heading-contents {
+    padding-top: 2em;
+}
+.heading-container-single .heading-image-block-before-element-number {
+    margin-bottom: 2em;
+}
+.heading-container-single .heading-image-block-after-element-number {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+.heading-container-single .heading-image-block-after-title-and-subtitle {
+    margin-top: 1.5em;
+}
+.heading-container-single .heading-image-block {
+    display: block;
+    text-align: center;
+}
+.heading {
+    margin-bottom: 2em;
+}
+.heading-container-group {
+    margin-bottom: 3em;
+}
+.heading-container-group {
+    min-height: 15em;
+}
+.heading-container-group .heading-contents {
+    padding-top: 4em;
+}
+.heading h1, .heading h2, .heading h3 {
+    line-height: 1.2 !important;
+}
+.heading-image-size-container {
+    display: inline-block;
+}
+img.heading-image-image {
+    width: 100% !important;
+    height: auto !important;
+}
+.heading-ornament-size-container {
+    display: inline-block;
+}
+.heading-ornament-size-container img.heading-ornament-image {
+    width: 100% !important;
+    height: auto !important;
+}
+.heading-alignment-fixed {
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: center;
+}
+.heading-alignment-fixed .element-number, .heading-alignment-fixed .element-title, .heading-alignment-fixed .element-subtitle, .heading-alignment-fixed .element-author {
+    text-align: center;
+}
+.heading-container-group .element-number {
+    font-size: 130%;
+}
+.heading-container-group .element-title {
+    font-size: 150%;
+}
+.heading-container-group .element-subtitle {
+    margin-top: 1.3em;
+    margin-bottom: 1.5em;
+    font-size: 100%;
+}
+.heading-container-group .element-author {
+    margin-top: 1.3em;
+    margin-bottom: 1.5em;
+    font-size: 120%;
+}
+.heading-container-group .heading-image-block {
+    display: block;
+    text-align: center;
+}
+.heading-container-group .heading-image-block-before-heading-number {
+    margin-bottom: 2em;
+}
+.heading-container-group .heading-image-block-after-heading-number {
+    margin-top: 1.5em;
+    margin-bottom: 1.3em;
+}
+.heading-container-group .heading-image-block-after-title-and-subtitle {
+    margin-top: 1.5em;
+}
+.heading-size-small .title-subtitle-block, .heading-size-small .title-subtitle-block .title-block, .heading-size-small .title-subtitle-block .element-number-block {
+    padding-top: 0px;
+}
+.heading-size-small .heading-contents {
+    padding-top: 2em;
+}
+.heading-size-medium {
+    min-height: 6em;
+}
+.heading-size-medium .title-subtitle-block, .heading-size-medium .title-subtitle-block .title-block, .heading-size-medium .title-subtitle-block .element-number-block {
+    padding-top: 0px;
+}
+.heading-size-medium .heading-contents {
+    padding-top: 3em;
+}
+.heading {
+    margin-left: 0;
+    margin-right: 0;
+}
+.heading .heading-contents {
+    margin-left: 9%;
+    margin-right: 9%;
+}
+.heading-container-single .element-title.case-upper {
+    font-size: 100%;
+    margin-top: 0.35em;
+    letter-spacing: 0.05em;
+}
+.heading-container-single .element-title.case-mixed {
+    font-size: 115%;
+    letter-spacing: 0.05em;
+    margin-top: 0.25em;
+}
+.heading-container-single .element-subtitle.case-upper {
+    font-size: 80%;
+    margin-top: 0.75em;
+    letter-spacing: 0.05em;
+}
+.heading-container-single .element-subtitle.case-mixed {
+    font-size: 95%;
+    margin-top: 0.5em;
+    letter-spacing: 0.03em;
+}
+.heading-container-single .element-author {
+    font-size: 80%;
+    margin-top: 1em;
+}
+.element-container-group .heading .element-number {
+    font-size: 110%;
+    letter-spacing: 0.05em;
+}
+.element-container-group .heading .element-title {
+    font-size: 120%;
+    letter-spacing: 0.05em;
+    margin-top: 0.4em;
+    text-transform: uppercase;
+}
+.element-container-group .heading .element-subtitle {
+    font-size: 90%;
+    letter-spacing: 0.05em;
+    margin-top: 0.7em;
+}
+.element-container-group .heading .element-author {
+    font-size: 110%;
+    letter-spacing: 0.05em;
+    margin-top: 1.3em;
+}
+.section-title {
+    letter-spacing: 0.05em;
+    font-size: 90%;
+}
+h1.title-page-title {
+    letter-spacing: 0.05em;
+}
+h1.title-page-title {
+    font-size: 120%;
+}
+h2.title-page-subtitle {
+    margin-top: 0.7em;
+}
+.titlepage-several-primary-contributors .title-page-contributor {
+    font-size: 80%;
+}
+span.title-page-contributor-name {
+    letter-spacing: 0.03em;
+}
+.heading-format-full .element-number-block {
+    min-height: 1.4em;
+}
+.heading-size-full.heading-without-image .heading-contents {
+    padding-top: 3.25em;
+}
+.heading-size-full.heading-with-image .heading-contents {
+    padding-top: 1em;
+}
+.heading-ornament-block {
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+}
+.heading-ornament-block .heading-ornament-size-container {
+    width: 4em;
+}
+.titlepage-ornament-block {
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+.titlepage-ornament-block .titlepage-ornament-size-container {
+    width: 4em;
+}
+.heading-container-single .element-number {
+    font-size: 80%;
+    letter-spacing: 0.05em;
+}
+.element-author {
+    text-transform: uppercase;
+}
+.element-number {
+    text-transform: uppercase;
+}
+.element-number, .element-title, .element-number-and-title, .element-subtitle, .element-author, .section-title, .section-title sub, .section-title sup, h1.title-page-title, p.title-page-series-name, p.title-page-series-position, h2.title-page-contributor span.title-page-contributor-name, h2.title-page-contributor span.title-page-contributor-introduction, h2.title-page-publisher {
+    font-family: "IM FELL Double Pica", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+h2.title-page-subtitle {
+    font-family: "IM FELL Double Pica", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.section-title, .section-title sub, .section-title sup {
+    text-transform: uppercase;
+}
+.element-subtitle {
+    text-transform: uppercase;
+}
+h2.title-page-contributor span.title-page-contributor-name {
+    text-transform: uppercase;
+}
+p.title-page-series-name, p.title-page-series-position {
+    text-transform: uppercase;
+}
+h1.title-page-title {
+    text-transform: uppercase;
+}
+.element-title, .element-number-and-title {
+    text-transform: uppercase;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width {
+    -webkit-line-box-contain: block inline replaced;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter {
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none !important;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter b {
+    font-weight: normal;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter i {
+    font-style: normal;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter span.underline, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter span.strikethrough {
+    text-decoration: none !important;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-punctuation {
+    font-size: 40%;
+    vertical-align: middle;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-punctuation.punctuation-elevated {
+    vertical-align: super;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-punctuation.punctuation-baseline {
+    vertical-align: baseline;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-punctuation {
+    font-family: Palatino, Malabar, serif;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter {
+    line-height: 0.6 !important;
+    margin-top: 0.07em;
+    margin-right: 0.05em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter {
+    font-size: 370%;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-j, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-q, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-xxx {
+    line-height: 0.8 !important;
+    margin-top: -0.02em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-a, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-e, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-f, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-i, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-k, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-l, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-m, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-p, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-r, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-w, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-x, .element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-xxx {
+    margin-right: 0.1em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-q {
+    margin-right: 0.2em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-j {
+    margin-left: 0.15em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter.first-letter-w .first-punctuation {
+    margin-right: 0.1em;
+}
+.element-container-single.element-bodymatter p.first-in-chapter.first-full-width span.first-letter {
+    font-family: Baskerville, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+div.ornamental-break {
+    text-align: center;
+}
+div.ornamental-break-block, div.ornamental-break-size-container {
+    display: inline-block;
+}
+img.ornamental-break-image {
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: top;
+}
+p.ornamental-break-as-text {
+    text-align: center;
+    text-indent: 0px;
+}
+p.ornamental-break-as-text {
+    display: none;
+}
+div.ornamental-break-block {
+    width: 11.2em;
+}
+div.ornamental-break {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
+blockquote.prose.within-prose-element p.blockquote-content-prose {
+    font-size: 95%;
+}
+.accessible-character-formatting blockquote.prose.within-prose-element p.blockquote-content-prose {
+    font-size: inherit;
+}
+div.alignment-block {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
+div.alignment-block.keep-with-next.paragraph-follows {
+    margin-bottom: 0px;
+    padding-bottom: 1.4em;
+}
+p.alignment-block-content {
+    text-indent: 0px;
+    margin-top: 0em;
+}
+p.alignment-block-content-left {
+    text-align: left;
+}
+p.alignment-block-content-center {
+    text-align: center;
+}
+p.alignment-block-content-right {
+    text-align: right;
+}
+.ornamental-break-width-188 {
+    width: 18.8%;
+}
+.publisher-logo-width-778 {
+    width: 77.8%;
+}
+.heading-image-width-389 {
+    width: 38.9%;
+}
+.receipt-block {
+    display: flex;
+    flex-direction: column;
+}
+.receipt-row {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.receipt-item:nth-child(2) {
+    align-content:flex-start;
+    flex-basis:40%;
+    text-align: left;
+}
+.receipt-item:nth-child(1) {
+    align-content:flex-start;
+    flex-basis:60%;
+}
+.start-cover-image {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tutorial-wrapper {
+    margin: 14px 0;
+    display: inline-block;
+    width: 100%;
+    min-height: 180px;
+}
+.tutorial-header {
+    position: relative;
+}
+.tutorial-header__content {
+    padding: 8px 10px;
+    font-family: "Euclid Circular A", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 8px;
+    border: 1px solid #bfbfc1;
+    background: #f4f5f6;
+    color: #70727c;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+}
+.tutorial-header__content-title {
+    color: #70727c;
+    padding-right: 8px;
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+.tutorial-header__content-name p {
+    font-family: "Euclid Circular A", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    color: #70727c;
+}
+.tutorial-header__line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #bfbfc1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.tutorial-button {
+    font-family: "Euclid Circular A", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+    display: flex;
+    padding: 12px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #1a1c23;
+    margin-top: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: auto;
+    border: none;
+}
+.tutorial-question {
+    display: flex;
+    align-items: end;
+    margin-top: 14px;
+}
+.tutorial-question img {
+    width: 52px;
+    height: 52px;
+    margin-right: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.tutorial-question__text {
+    font-family: "Euclid Circular A", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    color: #1a1c23;
+    padding: 16px 18px;
+    background-color: #f4f5f6;
+    border-radius: 30px 30px 30px 0px;
+    max-height: 220px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.tutorial-question__text p {
+    font-family: "Euclid Circular A", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    color: #1a1c23;
+    text-align: start;
+}
+/* ========================= START: Video component styles ========================= */
+.video-wrapper {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    margin-bottom: 30px;
+}
+.video-wrapper .video-container {
+    cursor: pointer;
+    
+    position: relative;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 8px;
+    
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+}
+.video-wrapper .video-container .video-img {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 33.33%;
+    height: auto;
+
+    border-radius: 12px;
+}
+.video-wrapper .video-container .video-img img {
+    display: block;
+
+    width: 100%;
+    max-width: 100% !important;
+    margin: auto;
+
+    object-fit: cover;
+    background-color: transparent;
+}
+.video-wrapper .video-container .video-play-button {
+    cursor: pointer;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video-wrapper .video-container .video-duration {
+    position: absolute;
+    z-index: 1;
+    right: 8px;
+    bottom: 8px;
+
+    font-size: 14px;
+    color: white;
+}
+.video-wrapper .video-container .video-details {
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: stretch;
+
+    width: 66.66%;
+    padding-left: 20px;
+}
+.video-wrapper .video-container .video-details .name {
+    font-size: 16px;
+    font-weight: 600;
+}
+.video-wrapper .video-container .video-details .description {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #70727c;
+}
+.video-wrapper .video-container .video-details .transcript {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: auto;
+}
+.video-wrapper .video-container .video-details .transcript .icon {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.video-wrapper .video-container .video-details .transcript .icon span {
+    display: block;
+
+    width: 12px;
+    height: 1px;
+    margin: 1px 0;
+
+    background-color: #70727c;
+}
+.video-wrapper
+.video-container
+.video-details
+.transcript
+.icon
+span:last-child {
+    width: 6px;
+}
+.video-wrapper .video-container .video-details .transcript .text {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #70727c;
+}
+/* ========================== END: Video component styles ========================== */
+.new-page-divider {
+    margin-top: 90vh;
+}
+.view-tracker {
+    min-height: 1px;
+}
+div.invisible {
+    display: none;
+}
+/* BIBLE STYLES */
+
+body { font-family: Georgia, serif }
+
+p           { margin-top: 0pt; margin-bottom: 0pt }
+h1, h2, h3, h4  { text-align: center; font-weight: bold }
+h5, h6      { font-weight: normal; font-style: italic; text-align: left }
+h1      { font-size: x-large; margin-top: 18pt; margin-bottom:12pt }
+h2      { font-size: large; margin-top: 12pt; margin-bottom:12pt }
+h3      { font-size: medium; margin-top: 9pt; margin-bottom:9pt }
+h4      { font-size: small; margin-top: 6pt; margin-bottom:6pt }
+h5      { margin-top: 6pt; margin-bottom:6pt }
+h6      { margin-top: 6pt; margin-bottom:6pt }
+address     { font-style: italic }
+sup     { vertical-align: text-top; font-size: x-small }
+sup.v       { line-height:1.0 }
+big     { font-size: larger }
+small       { font-size: smaller }
+blockquote  { margin-left:0.5in; margin-right:0.5in; margin-top: 12pt;
+          margin-bottom:12pt }
+.blockquote { margin-left:0.5in; margin-right:0.5in; text-indent:0in; 
+          margin-top:12pt }
+
+a.TOC       { text-decoration: none }
+a.TOC:hover { text-decoration: underline }
+a.Note      { text-decoration: none }
+a.Note:hover    { text-decoration: underline }
+a.scripRef  { text-decoration: none }
+a.scripRef:link { color:#E00000 }
+a.scripRef:hover { text-decoration: underline }
+a.scripRef:visited { color:#800000 }
+p.First     { text-indent: 0.0in }
+p.First:first-letter {font-size: 270%; float: left; margin-top: -10px; }
+p.dropcap   { text-indent: 0in }
+p.dropcap:first-letter {font-size:200%; float:left }
+p.smallcap  { text-indent: 0in }
+p.smallcap:first-letter { font-size:200% }
+.sc     { font-variant: small-caps }
+
+p.Continue  { text-indent: 0in }
+p.ChapterSummary {text-align: center; font-style: italic }
+p.Attribution   { text-align: right }
+p.Argument  { text-align: center; font-style: italic }
+p.meter     { text-align: right; margin-top: -12pt }
+p.SectionInfo   { margin-left: 1.0in; text-indent: -0.5in;
+          margin-right: 0.5in; font-style: italic }
+p.footnote  { text-indent:0.25in }
+p.endnote   { text-indent:0.35in }
+.pagebreak  { page-break-before:always }
+sup.Note    { font-size: 65%; vertical-align:35% }
+sup.NoteRef { font-size: 65%; vertical-align:35% }
+div.Note    { font-size: 88%; text-indent: 0.35in }
+div.offer   { margin-top:6pt; }
+p.noteMark  { text-indent:0in; margin-bottom:-12pt }
+p.pages     { text-indent:0in; font-size:smaller }
+
+.List1, .List2, .List3, .List4, .List5, .List6, .List7
+        { text-indent: -0.25in; margin-right: 0.25in }
+.List1      { margin-left: 0.5in }
+.List2      { margin-left: 0.75in }
+.List3      { margin-left: 1.0in }
+.List4      { margin-left: 1.25in }
+.List5      { margin-left: 1.5in }
+.List6      { margin-left: 1.75in }
+.List7      { margin-left: 2.0in }
+.ListCont1, .ListCont2, .ListCont3, .ListCont4, .ListCont5, .ListCont6
+        { text-indent: 0in; margin-right: 0.5in }
+.ListCont1  { margin-left: 0.5in }
+.ListCont2  { margin-left: 0.75in }
+.ListCont3  { margin-left: 1.0in }
+.ListCont4  { margin-left: 1.25in }
+.ListCont5  { margin-left: 1.5in }
+.ListCont6  { margin-left: 1.75in }
+
+div.Verse   { margin-top: 12pt; margin-left: 1.25in; margin-right: 0.5in;
+          display:block}
+div.verse2  { width:80%; margin-left:10%; text-align:center; margin-top:6pt; margin-bottom:6pt }
+.t0     { margin-left:5em; text-indent:-5em }
+.t1, .t     { margin-left:5em; text-indent:-4em }
+.t2     { margin-left:5em; text-indent:-3em }
+.t3     { margin-left:5em; text-indent:-2em }
+.t4     { margin-left:5em; text-indent:-1em }
+.t5     { margin-left:5em }
+
+.TOC1, .TOC2, .TOC3, .TOC4 {text-indent: -0.3in; text-align: left }
+.TOC1       { margin-left: 0.3in; font-weight: bold; 
+         font-size: 110%; margin-top: 4pt }
+.TOC2       { margin-left: 0.6in; font-size: 100%; margin-top: 3pt }
+.TOC3       { margin-left: 0.9in; font-size: 90%; margin-top: 2pt }
+.TOC4       { margin-left: 1.2in; font-size: 90%; margin-top: 1pt }
+.TOC5       { margin-left: 1.5in; font-size: 90%; margin-top: 0pt }
+.TOC6       { margin-left: 1.8in; font-size: 90%; margin-top: 0pt }
+
+.Center, .Centered  { text-indent:0in; text-align:center }
+span.Italic { font-style:italic }
+span.Bold   { font-weight:bold }
+span.Sub    { vertical-align:sub }
+span.Super  { vertical-align:super }
+.left       { text-align:left }
+
+ul.Index1   { font-weight: bold }
+ul.Index2   { font-weight: normal }
+p.index1, p.index2, p.index3, p.index4 { text-indent:-2em; margin-top:0in }
+p.index1    { margin-left:2em }
+p.index2    { margin-left:3em }
+p.index3    { margin-left:4em }
+p.index4    { margin-left:5em }
+
+p.bbook     { text-indent:0in; font-weight: bold; text-align: center }
+p.bref      { text-indent:0in; text-align: center }
+p.by        { text-indent:0in; text-align: center; font-size:medium; 
+          margin-top: 12pt }
+
+table.marg  { position:absolute; left:0.1in; padding-left:1pt }
+table       { width: 100%; }
+td p        { text-indent: 0in }
+p.thin      { font-size:1pt; margin-top: 0pt }
+.page       { text-indent:0in; font-family: Arial, Helvetica, sans-serif; 
+          font-size:xx-small; color:#FFFFFF }
+.chap       { float:left; font-size:200% }
+span.Note   { color: blue }
+
+hr.W30      { width: 30% }
+hr.Note     { text-align: left; width: 30% }
+img.page    { margin-left: -0.5in }
+
+p.bib       { margin-left: 0.5in; text-indent: -0.25in; font-size: x-small }
+
+.mnote      { font-size:smaller; 
+          margin-top:0pt; background-color:#FFFFB0; 
+          text-indent:0in }
+
+.argument   { text-align: center; font-style: italic; text-indent:0in; 
+                  margin-bottom:12pt }
+.arg        { margin-top:6pt; margin-bottom:6pt; text-indent:0in; 
+          font-style:italic; text-align:center }
+.attr       { text-align: right }
+.meter      { text-align: right; margin-top: -12pt }
+span.unclear    { color: #808080 }
+span.Greek  { font-style: italic }
+span.Hebrew { font-style: italic }
+
+div.footer { position: absolute; bottom: 8px; font-size: smaller; width: 100%; text-align: center; }
+
+.poetry {
+    margin-top:0;
+    text-indent: -1.4em;
+    padding-left: 1.4em;
+}
+p:not(.poetry) + .poetry {
+    margin-top: 0.7em;
+}
+
+h2 + p {
+    text-indent: 0;
+}
+
+.chap {
+    margin-right: 0.75rem;
+}
+
+h2 {
+    page-break-after: avoid;
+}
+
+p.stanza, p.poetry.indent1 {
+    margin-left: 1rem;
+}
+
+p.poetry.indent2 {
+    margin-left: 2rem;
+}
+
+p.poetry.indent3 {
+    margin-left: 3rem;
+}
+
+p.poetry.indent4 {
+    margin-left: 4rem;
+}
+
+div.poem p.stanza-start {
+    margin-top: 1.4em;
+}
+span.buffer-hidden {
+    display: none;
+}

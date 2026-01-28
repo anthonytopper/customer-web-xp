@@ -1,0 +1,14 @@
+https://bible-rebind.onelink.me/yfwf/o9137r3q
+https://bible-rebind.onelink.me/yfwf/o9137r3q
+
+https://bible-rebind.onelink.me/yfwf?pid=Test&c=DDLTest&idfv=ai.rebind.studybible&deep_link_value=foo&deep_link_sub1=bar
+
+ai.rebind.studybible.dev
+
+
+https://bible-rebind.onelink.me/yfwf?pid=ios_testing&c=DDLTest&idfv=DA68A463-9E50-4AF1-9DA5-F11059D29722&deep_link_value=foo&deep_link_sub1=bar
+
+
+https://app.appsflyer.com/bible-rebind?pid=Test&c=Test&idfa=A9746C3A-0D2B-4D92-8141-EA503622D9BB
+
+https://bible-rebind.onelink.me/yfwf?pid=ios_testing&c=Test&idfa=A9746C3A-0D2B-4D92-8141-EA503622D9BB&deep_link_value=foo&deep_link_sub1=bar
