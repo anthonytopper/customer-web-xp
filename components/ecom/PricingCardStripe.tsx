@@ -158,6 +158,7 @@ export default function PricingCardStripe({ onSelectPlan }: PricingCardStripePro
   };
 
   const handlePlanClick = (plan: PricingPlan) => {
+    console.log('handlePlanClick', plan);
     onSelectPlan?.(plan.id, plan.priceId);
   };
 

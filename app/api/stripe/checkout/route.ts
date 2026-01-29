@@ -18,6 +18,10 @@ export async function POST(request: NextRequest) {
     }
     const user = authSession.user;
     const { priceId } = await request.json();
+    
+    // Check for confirm_ios query parameter
+    const { searchParams } = new URL(request.url);
+    const confirmIos = searchParams.get("confirm_ios");
 
     if (!process.env.STRIPE_API_KEY) {
       return NextResponse.json(
@@ -107,13 +111,13 @@ export async function POST(request: NextRequest) {
 
       if (activeSubscriptions.length > 0) {
         return NextResponse.json(
-          { error: "You already have an active subscription" },
+          { error: "You already have an active subscription", code: "ALREADY_SUBSCRIBED" },
           { status: 400 }
         );
       }
     }
     
-    const session = await stripe.checkout.sessions.create({
+    const sessionConfig: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
       line_items: [
         {
@@ -127,7 +131,32 @@ export async function POST(request: NextRequest) {
       customer: customer.id,
       success_url: `${request.headers.get("origin") || ""}/account/checkout?success=true`,
       cancel_url: `${request.headers.get("origin") || ""}/account/checkout?canceled=true`,
-    });
+    };
+
+    // Add custom field if confirm_ios query parameter is present
+    if (confirmIos) {
+      sessionConfig.custom_fields = [
+        {
+          key: "confirm_ios",
+          label: {
+            type: "custom",
+            custom: "Rebind is only on iOS: confirm I use an iOS device",
+          },
+          type: "dropdown",
+          optional: false,
+          dropdown: {
+            options: [
+              {
+                label: "Yes, I use an iOS device",
+                value: "yes",
+              },
+            ],
+          },
+        },
+      ];
+    }
+    
+    const session = await stripe.checkout.sessions.create(sessionConfig);
 
     return NextResponse.json({ sessionId: session.id, url: session.url });
   } catch (error) {
